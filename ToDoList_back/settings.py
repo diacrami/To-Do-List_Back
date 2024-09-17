@@ -3,6 +3,8 @@ import dj_database_url
 from pathlib import Path
 from datetime import timedelta
 
+DEBUG = False
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -44,33 +46,13 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-DEBUG = False
+
 
 ALLOWED_HOSTS = ["localhost","127.0.0.1","*"]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-""" DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ToDoList-prueba',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5433'
-    }
-} """
-""" DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'todolistdb_mr8s',
-        'USER': 'diacrami',
-        'PASSWORD': 'vHAnn8ubMoCrIoLkuxk7EObdjC4nEzjR',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
-} """
 
 # Parse database configuration from $DATABASE_URL
 """ import dj_database_url """
@@ -154,12 +136,7 @@ USE_TZ = True
 
 
 
-""" CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://localhost:5174', 
-    'http://127.0.0.1:5173',
-    'http://127.0.0.1:5174', 
-] """
+
 CORS_ORIGIN_ALLOW_ALL = True   
 
 CORS_ALLOW_CREDENTIALS = True
